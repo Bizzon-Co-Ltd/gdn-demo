@@ -1,0 +1,149 @@
+<krpano>
+
+	<plugin name="pp_blur" keep="true"
+			url="%VIEWER%/plugins/pp_blur.js"
+			enabled="true"
+			range="0.0"
+			linearrgb="false"
+			order="1"
+			phase="2"
+			/>
+
+
+	<skin_settings
+		ad_scale="calc:device.mobile ? 0.5 : 1"
+		/>
+
+	<!-- azé van itt mart vissza lett irva animalt hotspotra, meg van scale change onover,onoutnal 
+	<style name="skin_hotspotstyle" url="get:skin_settings.hotspot_url" distorted="false" scale="get:skin_settings.hotspot_scale" edge="center" alpha="get:skin_settings.hotspot_alpha"
+		 tooltip="" linkedscene="" linkedscene_lookat="" onclick="tween(depth|alpha|oy|rx, 4000|0.0|-50|-60, 0.5);skin_hotspotstyle_click();"  onover="tween(scale,0.55);"  onout="tween(scale,0.5);"		
+		onloaded="if(linkedscene AND skin_settings.tooltips_hotspots, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips););do_crop_animation(128,128,60);"
+	/>
+	-->
+	
+			<hotspot name="info-text-01" style="text_box_label" ath="calc:hotspot[info-icon-01].ath" atv="calc:hotspot[info-icon-01].atv" alpha="1" edge="center" onout="tween(hotspot[info-text-01].scale,0,0.15)" onclick="tween(hotspot[info-text-01].scale,0,0.15)" scale="0" html="[p]a super-tall skyscraper[p] [p][textformat][b][font size='5']LANDMARK 81[/font][/b][/textformat] [br][br]add: Binh Thanh District, Ho Chi Minh City[br] Tallest in Vietnam since 2018[br][/p]"/>
+
+	 
+	 <!--  info box - text box style  -->
+   <style name="text_box_style" type="text" devices="all" distorted="true" padding="15" children="true" x="0" y="0" align="center" edge="center" bg="true" bgcolor="0xE8E6E3" bgalpha="0.9" bgborder="0" bgroundedge="4" keep="false" css="calc:lang == 'AR' ? 'text-align:left ;color:#34322e; font-family:Dubai; font-size:13px;' : 'text-align:left ;color:#34322e; font-family:Raleway; font-size:13px;'"/>
+   <style name="text_box_style" width="320" devices="mobile"/>
+  
+   <!--  spot info icon style  -->
+   <style name="spot_info_style" url="%VIEWER%/leedoskin/ad_popups/info_icon_black.png" distorted="true" keep="false" scale="0.2" zoom="false" edge="center" children="true" onhover="" onloaded="" alpha="0.1"/>
+   <style name="spot_info_style" scale="0.1" devices="mobile"/>
+  
+   <!--  csak egy sima icon, semmi faxni spot info icon style  -->
+   <style name="spot_info_only" url="%VIEWER%/leedoskin/ad_popups/info_icon_black_2.png" keep="false" width="20" height="20" zoom="false" edge="center" children="true" onhover="" onloaded=""/>
+   <style name="text_box_label" type="text" devices="all" distorted="false" width="300" height="auto" padding="15" align="center" bg="true" bgcolor="0xE8E6E3" bgalpha="1" handcursor="false" enabled="true" capture="true" bgborder="0" bgroundedge="4" keep="false" css="calc:lang == 'AR' ? 'text-align:right ;color:#34322e; font-family:Raleway; font-size:13px;' : 'text-align:left ;color:#34322e; font-family:Raleway; font-size:13px;'"/>
+	 
+	<!-- Hotspot info on scene
+	<hotspot name="info-icon-01" style="spot_info_only" ath="15.57" atv="-6" alpha="0.5" onhover="tween(hotspot[info-text-01].scale,1,0.15)" onclick="tween(hotspot[info-text-01].scale,1,0.15);"/>
+	<hotspot name="info-text-01" style="text_box_label" ath="calc:hotspot[info-icon-01].ath" atv="calc:hotspot[info-icon-01].atv" alpha="1" edge="center" onout="tween(hotspot[info-text-01].scale,0,0.15)" onclick="tween(hotspot[info-text-01].scale,0,0.15)" scale="0" html="[p]Artist: Björn Persson[p] [p][textformat][b][font size='4']The Giant, 2018[/font][/b][/textformat] [br][br]Exhibition print size: 150 x 100 cm[br] Edition: 1/3[br][/p]"/>
+	 -->
+	 
+	<!-- info hotspot style RED Spinning INFO icon-->
+	<style name="info_hotspot_red" url="%VIEWER%/leedoskin/ad_popups/animated_red_info_icon.png" onloaded="do_crop_animation(64,64,15);" scale="0.4" alpha="0.5" zoom="false" edge="center" />
+    <style name="info_hotspot_red" scale="0.4" devices="mobile" />
+
+	<!-- ad clocs button white top right corner-->
+	<style name="ad_close_button_style" url="%VIEWER%/leedoskin/ad_popups/close_button_white.png" align="topright" edge="center"  handcursor="true" scale="calc:device.mobile ? 0.15 : 0.3" zorder="11" />
+
+	<!-- ad popup style-->
+	<style name="ad_popup_style" zorder="10" align="center" />
+
+	<!-- cupon download button style-->
+	<style name="download_button_style" type="container"  bgcapture="true" align="center" handcursor="true" scale="calc:device.mobile ? 0.5 : 1"  bgcolor="0xFFFFFF" zorder="12" style="skin_tooltips_small"  onhover="tween(bgalpha,0.3,0.5);" onout="tween(bgalpha,0,0.5);" />
+
+	<!-- ad open/close actions-->
+	<action name="open_ad" scope="local" args="ad,lookat_h,lookat_v,dbx,dby,dbw,dbh">
+		<!-- No lookto if VR is enabled -->
+		if(!webvr.isenabled,lookto(get(lookat_h),get(lookat_v),get(view.fov),smooth(200,200,80)););
+
+		<!-- create ad white frame -->
+		addlayer('white_frame', white_frame);
+		add(w_w, layer[get(ad)].width,20);
+		add(w_h, layer[get(ad)].height,20);
+		set (white_frame, type=container, bgcolor=0xffffff, align=center, bgalpha=1, bgshadow='0 10 20 0x000000 0.5', zorder=8, width=get(w_w), height=get(w_h), scale=0);
+		
+		<!-- background blur -->
+		tween(global.plugin[pp_blur].range, 40.0);
+		
+		<!-- ad open -->
+		tween(layer[get(ad)].scale,get(skin_settings.ad_scale),0.3);
+		tween(layer[white_frame].scale,get(skin_settings.ad_scale),0.3,null,wait);
+		
+		<!-- close button -->
+		txtadd(on_click, 'close_ad(',get(ad),');');
+		addlayer('close_btn', close_btn);
+		set(close_btn, style=ad_close_button_style, parent=get(ad), onclick=get(on_click));
+		layer[close_btn].loadstyle(ad_close_button_style);
+
+		<!-- download button -->
+		addlayer('download_btn', download_btn);
+		set(download_btn, style=download_button_style, parent=get(ad), bgalpha=0, x=get(dbx), y=get(dby), width=get(dbw), height=get(dbh), onclick=openurl('https://google.com',_blank););
+		if(device.mobile,set(layer[download_btn].x,calc(get(layer[download_btn].x) / 2));set(layer[download_btn].y,calc(get(layer[download_btn].y) / 2)));
+		layer[download_btn].loadstyle(download_button_style);
+		
+		<!-- download button highlight flash-->
+		tween(layer[download_btn].bgalpha,0.7,0.1,null,wait); 
+		tween(layer[download_btn].bgalpha,0,0.5);
+
+	</action>
+
+	<action name="close_ad" scope="local" args="ad">
+		tween(layer[white_frame].scale,0,0.3);
+		tween(layer[get(ad)].scale,0,0.3);
+		tween(global.plugin[pp_blur].range, 0.0);
+		removelayer(close_btn);
+		removelayer(white_frame);
+		removelayer(download_btn);
+	</action>
+ 
+
+ <!-- Sajat actin a HOTSPOT_Clickre a forgas lett hozza adva a Lookto 
+	<action name="skin_hotspotstyle_click" scope="local" >
+		if(caller.linkedscene,
+			copy(hs_linkedscene, caller.linkedscene);
+			if(!webvr.isenabled,lookto(get(caller.ath),0,50,smooth(200,200,100)));
+			if(scene[get(xml.scene)].heading === "",set(scene[get(xml.scene)].heading,0););
+			if(!caller.linkedscene_lookat, 
+				copy(hs_lookat_h,view.hlookat); 
+				copy(hs_lookat_v,view.vlookat); 
+				set(hs_lookat_fov,110);	
+				,
+				txtsplit(caller.linkedscene_lookat, ',', hs_lookat_h, hs_lookat_v, hs_lookat_fov);
+			);
+			
+			add(actual_scene_heading, hs_lookat_h,get(scene[get(xml.scene)].heading));		
+			
+			if(!caller.linkedscene_lookto, 
+				copy(hs_lookto_h,view.hlookat); 
+				copy(hs_lookto_v,view.vlookat); 
+				set(hs_lookto_fov,110);
+				,
+				txtsplit(caller.linkedscene_lookto, ',', hs_lookto_h, hs_lookto_v, hs_lookto_fov);
+			);
+			
+			
+			
+			set(caller.enabled, false);
+			skin_hidetooltips();
+			
+			skin_loadscene(get(hs_linkedscene), get(skin_settings.loadscene_blend)); 
+			if(scene[get(xml.scene)].heading === "",set(scene[get(xml.scene)].heading,0););
+			if(!caller.linkedscene_lookto,sub(hs_lookto_h,get(actual_scene_heading),get(scene[get(xml.scene)].heading)););
+			if(!caller.linkedscene_lookat,sub(hs_lookat_h,get(actual_scene_heading),get(scene[get(xml.scene)].heading)););
+			skin_lookat(get(hs_lookat_h), get(hs_lookat_v), get(hs_lookat_fov));
+			
+			wait(BLEND);
+			if(!webvr.isenabled,
+				skin_lookto(get(hs_lookto_h), get(hs_lookto_v), get(hs_lookto_fov));
+			);
+			skin_updatescroll();
+				
+		);
+	</action>
+	-->
+
+
+</krpano>
