@@ -850,14 +850,14 @@ input[type="submit"] {
 .text-moment-museum {
   position: absolute;
   height: 6.2%;
-  top: 17.78%;
-  right: 19%;
-  width: 16.4%; }
+  top: 18.78%;
+  right: 19.2%;
+  width: 15.7%; }
   @media screen and (max-width: 768px) {
     .text-moment-museum {
-      top: 20.5%;
-      right: 13.6%;
-      width: 19.1%;
+      top: 21.5%;
+      right: 14%;
+      width: 18.4%;
       height: 7%; } }
   .text-moment-museum .inner-text-moment-museum {
     position: relative;
