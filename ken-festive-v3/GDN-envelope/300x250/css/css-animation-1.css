@@ -18,10 +18,10 @@ body {
           animation: bg 10s infinite; }
 
 .text-1 {
-    position: absolute;
-    width: 53%;
-    top: 25%;
-    right: -5.5%;}
+        position: absolute;
+    width: 57%;
+    top: 27%;
+    right: -7.5%;}
   .text-1 img {
     -webkit-animation: text-1 10s infinite;
          -o-animation: text-1 10s infinite;
