@@ -13,9 +13,10 @@ body {
 
 .bg {
   width: 100%;
-  -webkit-animation: bg 10s infinite;
+/*  -webkit-animation: bg 10s infinite;
        -o-animation: bg 10s infinite;
-          animation: bg 10s infinite; }
+          animation: bg 10s infinite; */
+        }
 
 .text-1 {
       position: absolute;
@@ -465,9 +466,9 @@ body {
  
 }
 .light-1{
-  left: 83px;
+  left: 81px;
   top: 230px;
-  width: 50px;
+  width: 57px;
   z-index: 5;
    animation: light-1 10s infinite;
 }
@@ -475,9 +476,9 @@ body {
   /*left: 47px;
   top: 293px;
   width: 44px;*/
-  left: 66px;
-    top: 283px;
-    width: 40px;
+  left: 65px;
+    top: 275px;
+    width: 41px;
   z-index: 5;
    animation: light-2 10s infinite;
 }
