@@ -468,13 +468,13 @@ body {
 @-webkit-keyframes box-fight {
   0% {
     left: -50%; }
-  36% {
+  28% {
     left: -50%; }
-  48% {
+  40% {
+    left: 120%; }
+  44% {
     left: 120%; }
   52% {
-    left: 120%; }
-  60% {
     left: 120%; }
   100% {
     left: 120%; } }
@@ -482,13 +482,13 @@ body {
 @-o-keyframes box-fight {
   0% {
     left: -50%; }
-  36% {
+  28% {
     left: -50%; }
-  48% {
+  40% {
+    left: 120%; }
+  44% {
     left: 120%; }
   52% {
-    left: 120%; }
-  60% {
     left: 120%; }
   100% {
     left: 120%; } }
@@ -496,13 +496,13 @@ body {
 @keyframes box-fight {
   0% {
     left: -50%; }
-  36% {
+  28% {
     left: -50%; }
-  48% {
+  40% {
+    left: 120%; }
+  44% {
     left: 120%; }
   52% {
-    left: 120%; }
-  60% {
     left: 120%; }
   100% {
     left: 120%; } }
