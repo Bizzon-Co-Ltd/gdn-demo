@@ -13,9 +13,9 @@ body {
 
 .bg {
   width: 100%;
-  -webkit-animation: bg 10s infinite;
+ /* -webkit-animation: bg 10s infinite;
        -o-animation: bg 10s infinite;
-          animation: bg 10s infinite; }
+          animation: bg 10s infinite;*/ }
 .logo-1 {
          position: absolute;
     width: 31%;
@@ -158,45 +158,20 @@ body {
     opacity: 1;
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1); } }
-@keyframes logo-1 {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0); }
-  19% {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0); }
-  28% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); } }
-@keyframes logo-2 {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0); }
-  19% {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0); }
-  28% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); } }
+
 @keyframes text-3 {
  from {
     opacity: 0;
     /*-webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0)*/; }
-  24% {
+  10% {
     opacity: 0;
     /*-webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0)*/;
      -webkit-transform: scale3d(0, 0, 0.3);
     transform: scale3d(0, 0, 0.3);
     transform-origin: top; }
-  33% {
+  20% {
     opacity: 1;
     /*-webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); */
@@ -208,11 +183,11 @@ body {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0); }
-  28% {
+  13% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0); }
-  38% {
+  23% {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
@@ -221,14 +196,14 @@ body {
     opacity: 0;
     /*-webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0)*/; }
-  34% {
+  19% {
     opacity: 0;
     /*-webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0)*/;
      -webkit-transform: scale3d(0, 0, 0.3);
     transform: scale3d(0, 0, 0.3);
     transform-origin: bottom; }
-  44% {
+  28% {
     opacity: 1;
     /*-webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); */
@@ -242,14 +217,14 @@ body {
     opacity: 0;
     /*-webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0)*/; }
-  32% {
+  16% {
     opacity: 0;
     /*-webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0)*/;
      -webkit-transform: scale3d(0, 0, 0.3);
     transform: scale3d(0, 0, 0.3);
     transform-origin: bottom; }
-  42% {
+  26% {
     opacity: 1;
     /*-webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); */
