@@ -39,10 +39,10 @@ body {
 
 
 .text-1 {
-  position: absolute;
-    width: 77.5%;
-    top: 20.3%;
-    right: -10%;}
+ position: absolute;
+    width: 27.5%;
+    bottom: 12.3%;
+    left: 6.5%;}
   .text-1 img {
     -webkit-animation: text-1 10s infinite;
          -o-animation: text-1 10s infinite;
@@ -50,10 +50,10 @@ body {
     width: 100%; }
 
 .text-2 {
-     position: absolute;
-    width: 43.6%;
-    top: 36.5%;
-    right: -5.5%;}
+       position: absolute;
+    width: 13.4%;
+    bottom: -33%;
+    left: 59.3%;}
   .text-2 img {
     -webkit-animation: text-2 10s infinite;
          -o-animation: text-2 10s infinite;
@@ -61,20 +61,20 @@ body {
     width: 100%; }
 
 .text-3 {
-  position: absolute;
-    width: 85.6%;
-    top: 7.2%;
-    right: 2%;}
+      position: absolute;
+    width: 29%;
+    top: 32.5%;
+    left: 7%;}
   .text-3 img {
     -webkit-animation: text-3 10s infinite;
          -o-animation: text-3 10s infinite;
             animation: text-3 10s infinite;
     width: 100%; }
 .gift {
-   width: 57.9%;
+      width: 27.9%;
     position: absolute;
-    top: 20%;
-    left: 4%;
+    top: -2%;
+    left: 31.3%;
   -webkit-animation: gift 10s infinite;
        -o-animation: gift 10s infinite;
           animation: gift 10s infinite; }
@@ -220,7 +220,7 @@ body {
   width: 300px;
   height: 600px;
 }
-.md-ads-160-600.md-ads-mini{
-  width: 160px;
-  height: 600px;
+.md-ads-970-250.md-ads-mini{
+  width: 970px;
+  height: 250px;
 }

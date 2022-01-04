@@ -13,36 +13,14 @@ body {
 
 .bg {
   width: 100%;
- /* -webkit-animation: bg 10s infinite;
-       -o-animation: bg 10s infinite;
-          animation: bg 10s infinite;*/ }
-.logo-1 {
-         position: absolute;
-    width: 31%;
-    top: 1.8%;
-    left: 16%;}
-  .logo-1 img {
-    -webkit-animation: logo-1 10s infinite;
-         -o-animation: logo-1 10s infinite;
-            animation: logo-1 10s infinite;
-    width: 100%; }
-.logo-2 {
-  position: absolute;
-      width: 34.5%;
-    top: 3.3%;
-    right: 14%;}
-  .logo-2 img {
-    -webkit-animation: logo-2 10s infinite;
-         -o-animation: logo-2 10s infinite;
-            animation: logo-2 10s infinite;
-    width: 100%; }
+}
 
 
 .text-1 {
-  position: absolute;
-    width: 77.5%;
-    top: 20.3%;
-    right: -10%;}
+       position: absolute;
+    width: 110.5%;
+    top: 19.6%;
+    left: -7%;}
   .text-1 img {
     -webkit-animation: text-1 10s infinite;
          -o-animation: text-1 10s infinite;
@@ -50,31 +28,31 @@ body {
     width: 100%; }
 
 .text-2 {
-     position: absolute;
-    width: 43.6%;
-    top: 36.5%;
-    right: -5.5%;}
+        position: absolute;
+    width: 57.6%;
+    top: 50.5%;
+    left: -5.5%;}
   .text-2 img {
     -webkit-animation: text-2 10s infinite;
          -o-animation: text-2 10s infinite;
             animation: text-2 10s infinite;
     width: 100%; }
 
-.text-3 {
-  position: absolute;
-    width: 85.6%;
-    top: 7.2%;
-    right: 2%;}
+.text-3 {  
+ position: absolute;
+    width: 92.6%;
+    top: 11.4%;
+    left: 4%;}
   .text-3 img {
     -webkit-animation: text-3 10s infinite;
          -o-animation: text-3 10s infinite;
             animation: text-3 10s infinite;
     width: 100%; }
 .gift {
-   width: 57.9%;
+       width: 73.9%;
     position: absolute;
-    top: 20%;
-    left: 4%;
+    top: 32.7%;
+    left: 13.4%;
   -webkit-animation: gift 10s infinite;
        -o-animation: gift 10s infinite;
           animation: gift 10s infinite; }
@@ -84,27 +62,25 @@ body {
 
 
 .button {
- position: absolute;
-    width: 44%;
-    right: 3%;
-    bottom: 2.2%;}
+      position: absolute;
+    width: 74%;
+    right: 13%;
+    bottom: 10.2%;}
   .button img {
     width: 100%;
     -webkit-animation: tang-qua 10s infinite;
          -o-animation: tang-qua 10s infinite;
             animation: tang-qua 10s infinite; }
 .button-2 {
-     position: absolute;
-    width: 48%;
-    left: 3%;
-    bottom: 2.2%;}
+    position: absolute;
+    width: 81%;
+    left: 9%;
+    bottom: 16.2%;}
   .button-2 img {
     width: 100%;
     -webkit-animation: tang-qua-2 10s infinite;
          -o-animation: tang-qua-2 10s infinite;
             animation: tang-qua-2 10s infinite; }
-
-
 @keyframes text-3 {
  from {
     opacity: 0;
@@ -214,7 +190,6 @@ body {
     opacity: 1;
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1); } }
-
 
 .md-ads-300-600.md-ads-mini{
   width: 300px;
