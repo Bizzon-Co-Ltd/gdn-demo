@@ -8,8 +8,8 @@ body {
   background: #ffffff;
   overflow: hidden;
   display: inline-block;
-  width: 300px;
-  height: 600px; }
+  width: 970px;
+  height: 90px; }
 
 .bg {
   width: 100%;
@@ -19,25 +19,16 @@ body {
 
 .text {
   position: absolute;
-  top: 90px;
-  left: -20px;
+  top: 0px;
+  left: 415px;
   -webkit-animation: title-text 10s infinite;
        -o-animation: title-text 10s infinite;
           animation: title-text 10s infinite; }
 
-.product {
-  position: absolute;
-  top: 255px;
-  left: 20px;
-  -webkit-animation: product 10s infinite;
-       -o-animation: product 10s infinite;
-          animation: product 10s infinite; }
-
 .button {
   position: absolute;
-  width: 57%;
-  left: 50px;
-  bottom: 10px;
+  right: 0px;
+  bottom: 5px;
   -webkit-animation: button-mua-ngay 10s infinite;
        -o-animation: button-mua-ngay 10s infinite;
           animation: button-mua-ngay 10s infinite; }

@@ -9,7 +9,7 @@ body {
   overflow: hidden;
   display: inline-block;
   width: 300px;
-  height: 600px; }
+  height: 250px; }
 
 .bg {
   width: 100%;
@@ -19,25 +19,16 @@ body {
 
 .text {
   position: absolute;
-  top: 90px;
-  left: -20px;
+  top: -12px;
+  left: 48px;
   -webkit-animation: title-text 10s infinite;
        -o-animation: title-text 10s infinite;
           animation: title-text 10s infinite; }
 
-.product {
-  position: absolute;
-  top: 255px;
-  left: 20px;
-  -webkit-animation: product 10s infinite;
-       -o-animation: product 10s infinite;
-          animation: product 10s infinite; }
-
 .button {
   position: absolute;
-  width: 57%;
-  left: 50px;
-  bottom: 10px;
+  left: 175px;
+  bottom: -2px;
   -webkit-animation: button-mua-ngay 10s infinite;
        -o-animation: button-mua-ngay 10s infinite;
           animation: button-mua-ngay 10s infinite; }

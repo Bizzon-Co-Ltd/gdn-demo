@@ -8,7 +8,7 @@ body {
   background: #ffffff;
   overflow: hidden;
   display: inline-block;
-  width: 300px;
+  width: 160px;
   height: 600px; }
 
 .bg {
@@ -19,25 +19,16 @@ body {
 
 .text {
   position: absolute;
-  top: 90px;
-  left: -20px;
+  top: 93px;
+  left: -22px;
   -webkit-animation: title-text 10s infinite;
        -o-animation: title-text 10s infinite;
           animation: title-text 10s infinite; }
 
-.product {
-  position: absolute;
-  top: 255px;
-  left: 20px;
-  -webkit-animation: product 10s infinite;
-       -o-animation: product 10s infinite;
-          animation: product 10s infinite; }
-
 .button {
   position: absolute;
-  width: 57%;
-  left: 50px;
-  bottom: 10px;
+  left: -1px;
+  bottom: 6px;
   -webkit-animation: button-mua-ngay 10s infinite;
        -o-animation: button-mua-ngay 10s infinite;
           animation: button-mua-ngay 10s infinite; }
