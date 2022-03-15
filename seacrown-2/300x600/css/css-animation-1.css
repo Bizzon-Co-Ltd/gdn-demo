@@ -149,7 +149,7 @@ body {
      -webkit-transform: scale3d(0, 0, 0.3);
     transform: scale3d(0, 0, 0.3);
     transform-origin: bottom; }
-  22% {
+  21% {
     opacity: 1;
     /*-webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); */
@@ -170,7 +170,7 @@ body {
      -webkit-transform: scale3d(0, 0, 0.3);
     transform: scale3d(0, 0, 0.3);
     transform-origin: bottom; }
-  27% {
+  26% {
     opacity: 1;
     /*-webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); */
