@@ -17,10 +17,11 @@ body {
 
 
 .text-1 {
-       position: absolute;
-    width: 110.5%;
-    top: 19.6%;
-    left: -7%;}
+  position: absolute;
+    
+   width: 63.5%;
+    top: 6.2%;
+    right: 14.8%;}
   .text-1 img {
     -webkit-animation: text-1 10s infinite;
          -o-animation: text-1 10s infinite;
@@ -28,97 +29,175 @@ body {
     width: 100%; }
 
 .text-2 {
-        position: absolute;
-    width: 57.6%;
-    top: 50.5%;
-    left: -5.5%;}
+   position: absolute;
+    width: 100%;
+    top: 21.4%;
+    left: 0%;}
   .text-2 img {
     -webkit-animation: text-2 10s infinite;
          -o-animation: text-2 10s infinite;
             animation: text-2 10s infinite;
     width: 100%; }
 
-.text-3 {  
- position: absolute;
-    width: 92.6%;
-    top: 11.4%;
-    left: 4%;}
-  .text-3 img {
-    -webkit-animation: text-3 10s infinite;
-         -o-animation: text-3 10s infinite;
-            animation: text-3 10s infinite;
-    width: 100%; }
+
 .gift {
-       width: 73.9%;
+   width: 40.9%;
     position: absolute;
-    top: 32.7%;
-    left: 13.4%;
+    bottom: 25.5%;
+    left: 33%;
+    z-index: 5;
   -webkit-animation: gift 10s infinite;
        -o-animation: gift 10s infinite;
           animation: gift 10s infinite; }
   .gift img {
     width: 100%; }
+.gift-2 {
+ width: 100%;
+    position: absolute;
+    bottom: 9.4%;
+    right: 2.8%;
+  -webkit-animation: gift-2 10s infinite;
+       -o-animation: gift-2 10s infinite;
+          animation: gift-2 10s infinite; }
+  .gift-2 img {
+    width: 100%; }
+.gift-3 {
+     width: 45.9%;
+    position: absolute;
+    bottom: 24.5%;
+    left: 7%;
+  -webkit-animation: gift-3 10s infinite;
+       -o-animation: gift-3 10s infinite;
+          animation: gift-3 10s infinite; }
+  .gift-3 img {
+    width: 100%; }
 
+.gift-4 {
+    width: 41%;
+    position: absolute;
+    bottom: 33%;
+    left: 0%;
+  -webkit-animation: gift-4 10s infinite;
+       -o-animation: gift-4 10s infinite;
+          animation: gift-4 10s infinite; }
+  .gift-4 img {
+    width: 100%; }
 
 
 .button {
-      position: absolute;
-    width: 74%;
-    right: 13%;
-    bottom: 10.2%;}
+ position: absolute;
+    width: 95%;
+    left: 3%;
+    bottom: 0%;}
   .button img {
     width: 100%;
     -webkit-animation: tang-qua 10s infinite;
          -o-animation: tang-qua 10s infinite;
             animation: tang-qua 10s infinite; }
-.button-2 {
-    position: absolute;
-    width: 81%;
-    left: 9%;
-    bottom: 16.2%;}
-  .button-2 img {
-    width: 100%;
-    -webkit-animation: tang-qua-2 10s infinite;
-         -o-animation: tang-qua-2 10s infinite;
-            animation: tang-qua-2 10s infinite; }
-@keyframes text-3 {
- from {
+
+
+
+
+@keyframes text-1 {
+  from {
+     opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  10% {
+     opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  20% {
+   opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+    100%{
+      opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+    
+
+@keyframes text-2 {
+  from {
+     opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  15% {
+     opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  28% {
+   opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+    100%{
+      opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+    
+@keyframes gift {
+   from {
     opacity: 0;
     /*-webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0)*/; }
-  10% {
+  27% {
     opacity: 0;
     /*-webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0)*/;
      -webkit-transform: scale3d(0, 0, 0.3);
     transform: scale3d(0, 0, 0.3);
-    transform-origin: top; }
-  20% {
+    transform-origin: bottom; }
+  37% {
     opacity: 1;
     /*-webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); */
      -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
-    transform-origin: top;} }
-@keyframes text-1 {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0); }
-  13% {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0); }
-  23% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); } }
-@-webkit-keyframes text-2 {
-  from {
+    transform-origin: bottom;} }
+@keyframes gift-2 {
+   from {
     opacity: 0;
     /*-webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0)*/; }
-  19% {
+  24% {
+    opacity: 0;
+    /*-webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0)*/;
+     -webkit-transform: scale3d(0, 0, 0.3);
+    transform: scale3d(0, 0, 0.3);
+    transform-origin: bottom; }
+  34% {
+    opacity: 1;
+    /*-webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); */
+     -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    transform-origin: bottom;} }
+@keyframes gift-3 {
+   from {
+    opacity: 0;
+    /*-webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0)*/; }
+  21% {
+    opacity: 0;
+    /*-webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0)*/;
+     -webkit-transform: scale3d(0, 0, 0.3);
+    transform: scale3d(0, 0, 0.3);
+    transform-origin: bottom; }
+  31% {
+    opacity: 1;
+    /*-webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); */
+     -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    transform-origin: bottom;} }
+@keyframes gift-4 {
+   from {
+    opacity: 0;
+    /*-webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0)*/; }
+  18% {
     opacity: 0;
     /*-webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0)*/;
@@ -133,63 +212,44 @@ body {
     transform: scale3d(1, 1, 1);
     transform-origin: bottom;} }
 
-
-@keyframes gift {
-   from {
-    opacity: 0;
-    /*-webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0)*/; }
-  16% {
-    opacity: 0;
-    /*-webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0)*/;
-     -webkit-transform: scale3d(0, 0, 0.3);
-    transform: scale3d(0, 0, 0.3);
-    transform-origin: bottom; }
-  26% {
-    opacity: 1;
-    /*-webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); */
-     -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-    transform-origin: bottom;} }
-
 @keyframes tang-qua {
   from {
     opacity: 0;
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
     transform: scale3d(0.3, 0.3, 0.3); }
-  42% {
+  38% {
     opacity: 0;
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
     transform: scale3d(0.3, 0.3, 0.3); }
-  52% {
+  48% {
     opacity: 1;
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1); }
-  
+  56% {
+    opacity: 1; }
+  58% {
+    opacity: 0; }
+  60% {
+    opacity: 1; }
+  62% {
+    opacity: 0; }
+  64% {
+    opacity: 1; }
+  77% {
+    opacity: 1; }
+  79% {
+    opacity: 0; }
+  81% {
+    opacity: 1; }
+  83% {
+    opacity: 0; }
+  85% {
+    opacity: 1; }
   100% {
     opacity: 1;
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1); } }
-@keyframes tang-qua-2 {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3); }
-  42% {
-    opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3); }
-  52% {
-    opacity: 1;
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1); }
 
-  100% {
-    opacity: 1;
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1); } }
 
 .md-ads-300-600.md-ads-mini{
   width: 300px;
