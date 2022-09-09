@@ -22,9 +22,9 @@ body {
     top: 0%;
     right: 28.8%;}
   .text-1 img {
-    -webkit-animation: text-1 10s infinite;
-         -o-animation: text-1 10s infinite;
-            animation: text-1 10s infinite;
+    -webkit-animation: text-1 8s infinite;
+         -o-animation: text-1 8s infinite;
+            animation: text-1 8s infinite;
     width: 100%; }
 
 .text-2 {
@@ -33,9 +33,9 @@ body {
     top: 10.5%;
     left: 0%;}
   .text-2 img {
-    -webkit-animation: text-2 10s infinite;
-         -o-animation: text-2 10s infinite;
-            animation: text-2 10s infinite;
+    -webkit-animation: text-2 8s infinite;
+         -o-animation: text-2 8s infinite;
+            animation: text-2 8s infinite;
     width: 100%; }
 
 
@@ -45,9 +45,9 @@ body {
     bottom: 52%;
     left: 11%;
     z-index: 5;
-  -webkit-animation: gift 10s infinite;
-       -o-animation: gift 10s infinite;
-          animation: gift 10s infinite; }
+  -webkit-animation: gift 8s infinite;
+       -o-animation: gift 8s infinite;
+          animation: gift 8s infinite; }
   .gift img {
     width: 100%; }
 .gift-2 {
@@ -55,9 +55,9 @@ body {
     position: absolute;
     bottom: 39%;
     left: 4.8%;
-  -webkit-animation: gift-2 10s infinite;
-       -o-animation: gift-2 10s infinite;
-          animation: gift-2 10s infinite; }
+  -webkit-animation: gift-2 8s infinite;
+       -o-animation: gift-2 8s infinite;
+          animation: gift-2 8s infinite; }
   .gift-2 img {
     width: 100%; }
 .gift-3 {
@@ -65,9 +65,9 @@ body {
     position: absolute;
     bottom: 26%;
     left: 43%;
-  -webkit-animation: gift-3 10s infinite;
-       -o-animation: gift-3 10s infinite;
-          animation: gift-3 10s infinite; }
+  -webkit-animation: gift-3 8s infinite;
+       -o-animation: gift-3 8s infinite;
+          animation: gift-3 8s infinite; }
   .gift-3 img {
     width: 100%; }
 
@@ -76,9 +76,9 @@ body {
     position: absolute;
     bottom: 10%;
     left: 7%;
-  -webkit-animation: gift-4 10s infinite;
-       -o-animation: gift-4 10s infinite;
-          animation: gift-4 10s infinite; }
+  -webkit-animation: gift-4 8s infinite;
+       -o-animation: gift-4 8s infinite;
+          animation: gift-4 8s infinite; }
   .gift-4 img {
     width: 100%; }
 
@@ -90,9 +90,9 @@ body {
     bottom: 0%;}
   .button img {
     width: 100%;
-    -webkit-animation: tang-qua 10s infinite;
-         -o-animation: tang-qua 10s infinite;
-            animation: tang-qua 10s infinite; }
+    -webkit-animation: tang-qua 8s infinite;
+         -o-animation: tang-qua 8s infinite;
+            animation: tang-qua 8s infinite; }
 
 
 
@@ -129,6 +129,14 @@ body {
    opacity: 1;
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1); }
+    30% {
+    opacity: 0; }
+  32% {
+    opacity: 1; }
+  34% {
+    opacity: 0; }
+  36% {
+    opacity: 1; }
     100%{
       opacity: 1;
     -webkit-transform: scale3d(1, 1, 1);
