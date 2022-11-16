@@ -1,0 +1,300 @@
+.blk-kham-pha .ctn-inner .bg-blk-3c {
+    position: absolute;
+    left: -4%;
+    top: 0%;
+    width: 44%;
+    height: 100%;
+}
+.blk-left .img-blk-whell {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.blk-kham-pha .share-khoanh-khac{
+	width: 80%;
+	margin: 0 auto;
+}
+.blk-kham-pha{
+	padding: 0px 3vw;
+}
+.blk-whell .inner{
+	width: 75%;
+}
+.blk-kham-pha .blk-left{
+	padding: 2vw 0px 0px 0px;
+}
+.slider-url-1{
+	width: 88%;
+}
+
+
+.md-desktop{
+	display: block !important;
+}
+.md-moblie{
+	display: none !important;
+}
+@media screen and (min-width: 768.1px){
+	.blk-kham-pha {
+	    padding-bottom: 5vw;
+	}
+}
+
+@media screen and (max-width: 767px){
+	.md-desktop{
+		display: none !important;
+	}
+	.md-moblie{
+		display: block !important;
+	}
+	.blk-kham-pha {
+	    width: 100%;
+	    padding: 0px;
+	}
+	.blk-left .img-blk-whell {
+	    width: 60%;
+	    display: table;
+	    margin: 0 auto;
+        padding: 15% 0px 16%;
+	}
+	.blk-kham-pha .blk-left {
+	    background: url(../images/bg-blk-3c-mb.png) no-repeat;
+	    background-size: 100% 100%;
+	    width: 100%;
+        padding: 0px;
+        margin-bottom: 10%;
+	}
+	.blk-kham-pha .blk-right .share-khoanh-khac{
+		opacity: 1;
+		height: auto;
+		visibility: inherit;
+	}
+	
+	
+	.info-gift .item .info{
+		opacity: 1;
+		display: none;
+		visibility: hidden;
+	}
+	.info-gift .item .info.active{
+		display: block;
+	}
+	.info-gift{
+		margin: 0 auto;
+	}
+	.blk-kham-pha .blk-left .share-khoanh-khac{
+		padding-bottom: 15%;
+	}
+	.slider-url-1{
+		position: static;
+		width: 80%;
+		margin: 0 auto;
+		transform: translate(0%);
+		opacity: 1;
+		display: none;
+		transition-duration: 1s;
+	}
+	.slider-url-1.active-slider-url{
+		opacity: 1;
+		display: block;
+		transition-duration: 1s;
+	}
+	.wrapper-button-click .wrp-inner {
+	    display: table;
+	    margin: -5% auto 20px auto;
+	}
+}
+.select-videos-main .item{
+	color: #000 !important;
+    font-family: "UTM Bebas";
+    border-top: 1px solid #FFF;
+    font-size: 1.4vw;
+    background: #f6a95a !important;
+    padding: 7px 1.14285714rem!important;
+    cursor: pointer;
+}
+.select-videos-main{
+	width: 50%;
+	display: block;
+	background: #f6a95a !important;
+    border: none;
+    border-radius: 0px;
+    line-height: 1.2em;
+    text-align: left;
+    font-family: "UTM Bebas";
+}
+.select-videos-main .btn-secondary{
+	width: 100%;
+	color: #000 !important;
+	background: #f6a95a !important;
+	font-size: 1.9vw;
+	padding: 5px 2.1em 5px 1em;
+	min-height: 2em;
+	font-weight: 500;
+	border: none;
+	position: relative;
+	text-align: left;
+}
+.show>.btn-secondary.dropdown-toggle{
+	border: none;
+	background: none;
+}
+.select-videos-main .btn-secondary:hover{
+	border: none;
+
+}
+.select-videos-main .btn-secondary:after{
+	content: "";
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	display: block;
+}
+.select-videos-main .btn-secondary:focus{
+	box-shadow: none !important;
+}
+.select-videos-main .dropdown-menu.show{
+	width: 50%;
+	padding: 0px;
+	top: -1px !important;
+}
+
+.wrapper-rotate{
+	width: 100%;
+}
+.blk-kham-pha .blk-right{
+	padding: 0px 0px 2vw 10%;
+}
+
+@media screen and (max-width: 767px){
+	.select-videos-main{
+		width: 90%;
+	}
+	.select-videos-main .item{
+		font-size: 2.5vw;
+		 padding: 10px 1.14285714rem!important;
+	}
+	.select-videos-main .btn-secondary{
+		font-size: 3.5vw;
+	}
+	.select-videos-main .dropdown-menu.show{
+		width: 90%;
+	}
+}
+
+.wrapper-kham-pha{
+	position: relative;
+}
+.snow1 {
+  background: url(../images/snow.png);
+  background-repeat: repeat;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: snowOne 14s infinite linear;
+       -o-animation: snowOne 14s infinite linear;
+          animation: snowOne 14s infinite linear; }
+
+.snow2 {
+  background: url(../images/snow.png);
+  background-repeat: repeat;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: snowTwo 14s infinite linear;
+       -o-animation: snowTwo 14s infinite linear;
+          animation: snowTwo 14s infinite linear;
+  -webkit-background-size: 300px 300px;
+          background-size: 300px;
+  -webkit-filter: blur(1px);
+          filter: blur(1px); }
+
+.snow3 {
+  background: url(../images/snow.png);
+  background-repeat: repeat;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: snowThree 14s infinite linear;
+       -o-animation: snowThree 14s infinite linear;
+          animation: snowThree 14s infinite linear;
+  -webkit-background-size: 800px 800px;
+          background-size: 800px;
+  -webkit-filter: blur(2px);
+          filter: blur(2px); }
+
+@media screen and (max-width: 700px) {
+  .snow1 {
+    -webkit-animation: snowOne 18s infinite linear;
+         -o-animation: snowOne 18s infinite linear;
+            animation: snowOne 18s infinite linear; }
+
+  .snow2 {
+    -webkit-background-size: 250px 250px;
+            background-size: 250px;
+    -webkit-filter: blur(1px);
+            filter: blur(1px);
+    -webkit-animation: snowTwo 18s infinite linear;
+         -o-animation: snowTwo 18s infinite linear;
+            animation: snowTwo 18s infinite linear; }
+
+  .snow3 {
+    -webkit-animation: snowThree 18s infinite linear;
+         -o-animation: snowThree 18s infinite linear;
+            animation: snowThree 18s infinite linear;
+    -webkit-background-size: 250px 250px;
+            background-size: 250px; } }
+@-webkit-keyframes snowOne {
+  0% {
+    background-position: 0px 0px; }
+  100% {
+    background-position: 100px 750px; } }
+@-o-keyframes snowOne {
+  0% {
+    background-position: 0px 0px; }
+  100% {
+    background-position: 100px 750px; } }
+@keyframes snowOne {
+  0% {
+    background-position: 0px 0px; }
+  100% {
+    background-position: 100px 750px; } }
+@-webkit-keyframes snowTwo {
+  0% {
+    background-position: 0px -100px; }
+  100% {
+    background-position: 100px 750px; } }
+@-o-keyframes snowTwo {
+  0% {
+    background-position: 0px -100px; }
+  100% {
+    background-position: 100px 750px; } }
+@keyframes snowTwo {
+  0% {
+    background-position: 0px -100px; }
+  100% {
+    background-position: 100px 750px; } }
+@-webkit-keyframes snowThree {
+  0% {
+    background-position: 0px 100px; }
+  100% {
+    background-position: 100px 750px; } }
+@-o-keyframes snowThree {
+  0% {
+    background-position: 0px 100px; }
+  100% {
+    background-position: 100px 750px; } }
+@keyframes snowThree {
+  0% {
+    background-position: 0px 100px; }
+  100% {
+    background-position: 100px 750px; } }
