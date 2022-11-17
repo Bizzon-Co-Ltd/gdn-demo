@@ -150,116 +150,995 @@
 .blk-kham-pha .blk-right{
 	padding: 0% 0px 2vw 10%;
 }
-.snow1 {
-  background: url(../images/snow.png);
-  background-repeat: repeat;
-  width: 100%;
+.wrapper {
+ position: absolute;
+ left: 0%;
+ top: 0%;
+ width: 100%;
+ height: 100%;
+ z-index: 9999;
+}
+
+
+
+.ani-snow {
   height: 100%;
-  z-index: 99999;
+}
+
+.s1 {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-animation: snowOne 14s infinite linear;
-       -o-animation: snowOne 14s infinite linear;
-          animation: snowOne 14s infinite linear; }
-
-.snow2 {
-  background: url(../images/snow.png);
-  background-repeat: repeat;
-  width: 100%;
-  height: 100%;
-  z-index: 99999;
+  top: -100px;
+  left: 59%;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  filter: blur(calc(10px / 2.5));
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-name: drop, drop-right;
+          animation-name: drop, drop-right;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.s1::after {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-animation: snowTwo 14s infinite linear;
-       -o-animation: snowTwo 14s infinite linear;
-          animation: snowTwo 14s infinite linear;
-  -webkit-background-size: 300px 300px;
-          background-size: 300px;
-  -webkit-filter: blur(1px);
-          filter: blur(1px); }
-
-.snow3 {
-  background: url(../images/snow.png);
-  background-repeat: repeat;
-  width: 100%;
-  height: 100%;
-  z-index: 99999;
+  top: -100px;
+  left: 27%;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  filter: blur(calc(7px / 2.5));
+  transform: translate(201px, -116px);
+}
+.s1::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-animation: snowThree 14s infinite linear;
-       -o-animation: snowThree 14s infinite linear;
-          animation: snowThree 14s infinite linear;
-  -webkit-background-size: 800px 800px;
-          background-size: 800px;
-  -webkit-filter: blur(2px);
-          filter: blur(2px); }
+  top: -100px;
+  left: 51%;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  filter: blur(calc(6px / 2.5));
+  transform: translate(119px, -47px);
+}
 
-@media screen and (max-width: 700px) {
-  .snow1 {
-    -webkit-animation: snowOne 18s infinite linear;
-         -o-animation: snowOne 18s infinite linear;
-            animation: snowOne 18s infinite linear; }
+.s2 {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 67%;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background: #fff;
+  filter: blur(calc(3px / 2.5));
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-name: drop, drop-right;
+          animation-name: drop, drop-right;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.s2::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 12%;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  filter: blur(calc(5px / 2.5));
+  transform: translate(39px, -167px);
+}
+.s2::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 75%;
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  filter: blur(calc(4px / 2.5));
+  transform: translate(149px, -153px);
+}
 
-  .snow2 {
-    -webkit-background-size: 250px 250px;
-            background-size: 250px;
-    -webkit-filter: blur(1px);
-            filter: blur(1px);
-    -webkit-animation: snowTwo 18s infinite linear;
-         -o-animation: snowTwo 18s infinite linear;
-            animation: snowTwo 18s infinite linear; }
+.s3 {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  filter: blur(calc(8px / 2.5));
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-name: drop, drop-left;
+          animation-name: drop, drop-left;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.s3::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 49%;
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: #fff;
+  filter: blur(calc(9px / 2.5));
+  transform: translate(101px, -120px);
+}
+.s3::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 33%;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background: #fff;
+  filter: blur(calc(3px / 2.5));
+  transform: translate(190px, -174px);
+}
 
-  .snow3 {
-    -webkit-animation: snowThree 18s infinite linear;
-         -o-animation: snowThree 18s infinite linear;
-            animation: snowThree 18s infinite linear;
-    -webkit-background-size: 250px 250px;
-            background-size: 250px; } }
-@-webkit-keyframes snowOne {
-  0% {
-    background-position: 0px 0px; }
-  100% {
-    background-position: 100px 750px; } }
-@-o-keyframes snowOne {
-  0% {
-    background-position: 0px 0px; }
-  100% {
-    background-position: 100px 750px; } }
-@keyframes snowOne {
-  0% {
-    background-position: 0px 0px; }
-  100% {
-    background-position: 100px 750px; } }
-@-webkit-keyframes snowTwo {
-  0% {
-    background-position: 0px -100px; }
-  100% {
-    background-position: 100px 750px; } }
-@-o-keyframes snowTwo {
-  0% {
-    background-position: 0px -100px; }
-  100% {
-    background-position: 100px 750px; } }
-@keyframes snowTwo {
-  0% {
-    background-position: 0px -100px; }
-  100% {
-    background-position: 100px 750px; } }
-@-webkit-keyframes snowThree {
-  0% {
-    background-position: 0px 100px; }
-  100% {
-    background-position: 100px 750px; } }
-@-o-keyframes snowThree {
-  0% {
-    background-position: 0px 100px; }
-  100% {
-    background-position: 100px 750px; } }
-@keyframes snowThree {
-  0% {
-    background-position: 0px 100px; }
-  100% {
-    background-position: 100px 750px; } }
+.s4 {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 53%;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  filter: blur(calc(8px / 2.5));
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-name: drop, drop-right;
+          animation-name: drop, drop-right;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.s4::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 95%;
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: #fff;
+  filter: blur(calc(9px / 2.5));
+  transform: translate(8px, -7px);
+}
+.s4::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  filter: blur(calc(5px / 2.5));
+  transform: translate(173px, -5px);
+}
+
+.s5 {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 98%;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  filter: blur(calc(7px / 2.5));
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-name: drop, drop-right;
+          animation-name: drop, drop-right;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.s5::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 74%;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  filter: blur(calc(10px / 2.5));
+  transform: translate(191px, -128px);
+}
+.s5::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 46%;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  filter: blur(calc(7px / 2.5));
+  transform: translate(129px, -191px);
+}
+
+.s6 {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 23%;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  filter: blur(calc(6px / 2.5));
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-name: drop, drop-left;
+          animation-name: drop, drop-left;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.s6::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 100%;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  filter: blur(calc(8px / 2.5));
+  transform: translate(105px, -101px);
+}
+.s6::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 48%;
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: #fff;
+  filter: blur(calc(9px / 2.5));
+  transform: translate(200px, -74px);
+}
+
+.s7 {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 62%;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  filter: blur(calc(8px / 2.5));
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-name: drop, drop-right;
+          animation-name: drop, drop-right;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.s7::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 4%;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  filter: blur(calc(8px / 2.5));
+  transform: translate(123px, -122px);
+}
+.s7::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 40%;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  filter: blur(calc(6px / 2.5));
+  transform: translate(91px, -54px);
+}
+
+.s8 {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 22%;
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  filter: blur(calc(4px / 2.5));
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-name: drop, drop-right;
+          animation-name: drop, drop-right;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.s8::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 45%;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  filter: blur(calc(8px / 2.5));
+  transform: translate(130px, -4px);
+}
+.s8::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 56%;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  filter: blur(calc(6px / 2.5));
+  transform: translate(71px, -79px);
+}
+
+.s9 {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 15%;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  filter: blur(calc(6px / 2.5));
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-name: drop, drop-left;
+          animation-name: drop, drop-left;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.s9::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 74%;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  filter: blur(calc(10px / 2.5));
+  transform: translate(141px, -14px);
+}
+.s9::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 76%;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  filter: blur(calc(6px / 2.5));
+  transform: translate(62px, -22px);
+}
+
+.s10 {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 30%;
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: #fff;
+  filter: blur(calc(9px / 2.5));
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-name: drop, drop-right;
+          animation-name: drop, drop-right;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.s10::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 31%;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  filter: blur(calc(5px / 2.5));
+  transform: translate(62px, -164px);
+}
+.s10::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 95%;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  filter: blur(calc(5px / 2.5));
+  transform: translate(54px, -159px);
+}
+
+.s11 {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 42%;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  filter: blur(calc(7px / 2.5));
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-name: drop, drop-left;
+          animation-name: drop, drop-left;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.s11::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 34%;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  filter: blur(calc(6px / 2.5));
+  transform: translate(133px, -130px);
+}
+.s11::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 60%;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  filter: blur(calc(5px / 2.5));
+  transform: translate(95px, -141px);
+}
+
+.s12 {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 15%;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  filter: blur(calc(8px / 2.5));
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-name: drop, drop-right;
+          animation-name: drop, drop-right;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.s12::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 70%;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  filter: blur(calc(7px / 2.5));
+  transform: translate(59px, -131px);
+}
+.s12::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 74%;
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  filter: blur(calc(4px / 2.5));
+  transform: translate(152px, -153px);
+}
+
+.s13 {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 49%;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  filter: blur(calc(8px / 2.5));
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-name: drop, drop-right;
+          animation-name: drop, drop-right;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.s13::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 4%;
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: #fff;
+  filter: blur(calc(9px / 2.5));
+  transform: translate(31px, -23px);
+}
+.s13::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 71%;
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  filter: blur(calc(4px / 2.5));
+  transform: translate(150px, -52px);
+}
+
+.s14 {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 27%;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  filter: blur(calc(7px / 2.5));
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-name: drop, drop-left;
+          animation-name: drop, drop-left;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.s14::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 48%;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background: #fff;
+  filter: blur(calc(3px / 2.5));
+  transform: translate(44px, -30px);
+}
+.s14::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 97%;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  filter: blur(calc(7px / 2.5));
+  transform: translate(82px, -200px);
+}
+
+.s15 {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 79%;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  filter: blur(calc(10px / 2.5));
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-name: drop, drop-left;
+          animation-name: drop, drop-left;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.s15::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 8%;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  filter: blur(calc(8px / 2.5));
+  transform: translate(92px, -176px);
+}
+.s15::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 73%;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  filter: blur(calc(7px / 2.5));
+  transform: translate(95px, -145px);
+}
+
+.s16 {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 40%;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  filter: blur(calc(10px / 2.5));
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-name: drop, drop-left;
+          animation-name: drop, drop-left;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.s16::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 11%;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  filter: blur(calc(6px / 2.5));
+  transform: translate(200px, -7px);
+}
+.s16::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 68%;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  filter: blur(calc(8px / 2.5));
+  transform: translate(46px, -142px);
+}
+
+.s17 {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 66%;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  filter: blur(calc(5px / 2.5));
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-name: drop, drop-left;
+          animation-name: drop, drop-left;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.s17::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 66%;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  filter: blur(calc(5px / 2.5));
+  transform: translate(108px, -191px);
+}
+.s17::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 45%;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  filter: blur(calc(8px / 2.5));
+  transform: translate(198px, -91px);
+}
+
+.s18 {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 63%;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  filter: blur(calc(10px / 2.5));
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-name: drop, drop-left;
+          animation-name: drop, drop-left;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.s18::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 15%;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background: #fff;
+  filter: blur(calc(3px / 2.5));
+  transform: translate(171px, -110px);
+}
+.s18::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 40%;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  filter: blur(calc(8px / 2.5));
+  transform: translate(75px, -95px);
+}
+
+.s19 {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 79%;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  filter: blur(calc(5px / 2.5));
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-name: drop, drop-left;
+          animation-name: drop, drop-left;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.s19::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 86%;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background: #fff;
+  filter: blur(calc(3px / 2.5));
+  transform: translate(146px, -84px);
+}
+.s19::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 64%;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  filter: blur(calc(10px / 2.5));
+  transform: translate(182px, -76px);
+}
+
+.s20 {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 44%;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  filter: blur(calc(7px / 2.5));
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-name: drop, drop-right;
+          animation-name: drop, drop-right;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.s20::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 95%;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  filter: blur(calc(5px / 2.5));
+  transform: translate(88px, -5px);
+}
+.s20::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 85%;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  filter: blur(calc(6px / 2.5));
+  transform: translate(181px, -79px);
+}
+
+.s {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 78%;
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  filter: blur(calc(4px / 2.5));
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-name: drop, drop-left;
+          animation-name: drop, drop-left;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  left: 40%;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  animation-delay: 0s;
+}
+.s::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 55%;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  filter: blur(calc(6px / 2.5));
+  transform: translate(146px, -81px);
+}
+.s::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 72%;
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  filter: blur(calc(4px / 2.5));
+  transform: translate(129px, -45px);
+}
+
+@-webkit-keyframes drop {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+@keyframes drop {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}
+@-webkit-keyframes drop-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+@keyframes drop-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+@-webkit-keyframes drop-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100px);
+  }
+}
+@keyframes drop-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100px);
+  }
+}
