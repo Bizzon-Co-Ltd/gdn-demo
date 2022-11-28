@@ -404,46 +404,101 @@ $('.moment-museum .owl-carousel').owlCarousel({
 });
 
 
-function snowIt(flakes = 200) {
-  const randInt = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  };
-  let hh = window.innerHeight;
-  let ww = window.innerWidth;
-  console.log(hh, ww);
-  let animatedEllipses = "";
-  if (!flakes || Number.isNaN(flakes * 1)){
-    flakes = 200;
+const CONSTANTS = {
+  VX_MAX: 2,
+  VY_MAX: 5,
+  VY_ACCELERATE: 0.01,
+};
+class SnowFlake {
+  constructor() {
+    this.x = 0;
+    this.y = 0;
+    this.vx = 0;
+    this.vy = 0;
+    this.radius = 0;
+    this.alpha = 0;
+    this.reset();
   }
-  for (let i = 0; i < flakes; i++) {
-    animatedEllipses += `<g transform="translate(${randInt(ww * -0.1, ww * 0.1)} -10) scale(1.${randInt(0, 4)})">
-    <ellipse id="snowflake${i}" fill="#fff" cx="0" cy="0" rx="${randInt(1,3)}" ry="${randInt(1, 3)}" filter="url(#blur${randInt(1, 2)})" />
-  </g>
-  <animateMotion xlink:href="#snowflake${i}" dur="${randInt(70, 130)}s" begin="-${randInt(0, 130)}s" repeatCount="indefinite" rotate="auto-reverse">
-    <mpath xlink:href="#motionPath${randInt(1, 2)}" />
-  </animateMotion>`;
+
+  reset() {
+    this.radius = this.randBetween(1, 3);
+    this.alpha = this.randBetween(0.3, 0.9);
+    this.x = this.randBetween(0, window.innerWidth);
+    this.y = this.randBetween(-window.innerHeight, -this.radius);
+    this.vx = this.randBetween(-CONSTANTS.VX_MAX, CONSTANTS.VX_MAX);
+    this.vy = this.randBetween(0, 1);
   }
-  let svg = `<svg id="snowverlay" viewbox="0 0 ${ww} ${hh}" height="${hh}" width="${ww}" preserveAspectRatio="none" style="z-index:99999; user-select:none; pointer-events:none; top:50%;
-  left:50%; position:fixed; transform:translate(-50%,-50%)">
-  <filter id="blur1" x="-100%" y="-100%" width="300%" height="300%">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
-  </filter>
-  <filter id="blur2" x="-100%" y="-100%" width="300%" height="300%">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
-  </filter>
-  <path id="motionPath1" fill="none" stroke="none" d="M ${ww} -${hh * 0.1} Q ${ww * 0.8} ${hh * 0.25} ${ww} ${hh * 0.5} Q ${ww * 1.2} ${hh * 0.75} ${ww} ${hh * 1.1} M ${ww * 0.9} -${hh * 0.1} Q ${ww * 0.7} ${hh * 0.25} ${ww * 0.9
-  } ${hh * 0.5} Q ${ww * 1.1} ${hh * 0.75} ${ww * 0.9} ${hh * 1.1} M ${ww * 0.8} -${hh * 0.1} Q ${ww * 0.6} ${hh * 0.25} ${ww * 0.8} ${hh * 0.5} Q ${ww} ${hh * 0.75} ${ww * 0.8} ${hh * 1.1}M ${ww * 0.7} -${hh * 0.1} Q ${ww * 0.5} ${hh * 0.25} ${ww * 0.7} ${hh * 0.5} Q ${ww * 0.9} ${hh * 0.75} ${ww * 0.7} ${hh * 1.1} M ${ww * 0.6} -${hh * 0.1} Q ${ww * 0.4} ${hh * 0.25} ${ww * 0.6} ${hh * 0.5} Q ${ww * 0.8} ${hh * 0.75} ${ww * 0.6} ${hh * 1.1} M ${ww * 0.5} -${hh * 0.1} Q ${ww * 0.3} ${hh * 0.25} ${ww * 0.5} ${hh * 0.5} Q ${ww * 0.7} ${hh * 0.75} ${ww * 0.5} ${hh * 1.1}M ${ww * 0.4} -${hh * 0.1} Q ${ww * 0.2} ${hh * 0.25} ${ww * 0.4} ${hh * 0.5} Q ${ww * 0.6} ${hh * 0.75} ${ww * 0.4} ${hh * 1.1} M ${ww * 0.3} -${hh * 0.1} Q ${ww * 0.1} ${hh * 0.25} ${ww * 0.3} ${hh * 0.5} Q ${ww * 0.5} ${hh * 0.75} ${ww * 0.3} ${hh * 1.1} M ${ww * 0.2} -${hh * 0.1} Q ${ww * 0} ${hh * 0.25} ${ww * 0.2} ${hh * 0.5} Q ${ww * 0.4} ${hh * 0.75} ${ww * 0.2} ${hh * 1.1} M ${ww * 0.1} -${hh * 0.1} Q ${ww * -0.1} ${hh * 0.25} ${ww * 0.1} ${hh * 0.5} Q ${ww * 0.3} ${hh * 0.75} ${ww * 0.1} ${hh * 1.1} M 0 -${hh * 0.1} Q ${ww * -0.2} ${hh * 0.25} ${ww * 0} ${hh * 0.5} Q ${ww * 0.2} ${hh * 0.75} ${ww * 0} ${hh * 1.1}" />
-  <path id="motionPath2" fill="none" stroke="none" d="M ${ww * 0.0} -${hh * 0.1} Q ${ww * 0.2} ${hh * 0.25} ${ww * 0} ${hh * 0.5} Q ${ww * -0.2} ${hh * 0.75} ${ww * 0} ${hh * 1.1} M ${ww * 0.1} -${hh * 0.1} Q ${ww * 0.3} ${hh * 0.25} ${ww * 0.1} ${hh * 0.5} Q ${ww * -0.1} ${hh * 0.75} ${ww * 0.1} ${hh * 1.1} M ${ww * 0.2} -${hh * 0.1} Q ${ww * 0.4} ${hh * 0.25} ${ww * 0.2} ${hh * 0.5} Q ${ww * 0} ${hh * 0.75} ${ww * 0.2} ${hh * 1.1} M ${ww * 0.3} -${hh * 0.1} Q ${ww * 0.5} ${hh * 0.25} ${ww * 0.3} ${hh * 0.5} Q ${ww * 0.1} ${hh * 0.75} ${ww * 0.3} ${hh * 1.1} M ${ww * 0.4} -${hh * 0.1} Q ${ww * 0.6} ${hh * 0.25} ${ww * 0.4} ${hh * 0.5} Q ${ww * 0.2} ${hh * 0.75} ${ww * 0.4} ${hh * 1.1} M ${ww * 0.5} -${hh * 0.1} Q ${ww * 0.7} ${hh * 0.25} ${ww * 0.5} ${hh * 0.5} Q ${ww * 0.3} ${hh * 0.75} ${ww * 0.5} ${hh * 1.1} M ${ww * 0.6} -${hh * 0.1} Q ${ww * 0.8} ${hh * 0.25} ${ww * 0.6} ${hh * 0.5} Q ${ww * 0.4} ${hh * 0.75} ${ww * 0.6} ${hh * 1.1} M ${ww * 0.7} -${hh * 0.1} Q ${ww * 0.9} ${hh * 0.25} ${ww * 0.7} ${hh * 0.5} Q ${ww * 0.5} ${hh * 0.75} ${ww * 0.7} ${hh * 1.1} M ${ww * 0.8} -${hh * 0.1} Q ${ww} ${hh * 0.25} ${ww * 0.8} ${hh * 0.5} Q ${ww * 0.6} ${hh * 0.75} ${ww * 0.8} ${hh * 1.1} M ${ww * 0.9} -${hh * 0.1} Q ${ww * 1.1} ${hh * 0.25} ${ww * 0.9} ${hh * 0.5} Q ${ww * 0.7} ${hh * 0.75} ${ww * 0.9} ${hh * 1.1} M ${ww} -${hh * 0.1} Q ${ww * 1.2} ${hh * 0.25} ${ww} ${hh * 0.5} Q ${ww * 0.8} ${hh * 0.75} ${ww} ${hh * 1.1}" />
-  ${animatedEllipses}
-</svg>`;
-  //Make it a node to avoid the dangerous "document.body.innerHTML = svg"
-  let wrapper = document.createElement("div");
-  wrapper.innerHTML = svg;
-  let doc = wrapper.firstChild;
-  const element = document.getElementById("snowverlay");
-  element?.remove();
-  document.body.appendChild(doc);
+
+  update() {
+    if(this.vy < CONSTANTS.VY_MAX) {
+      this.vy += CONSTANTS.VY_ACCELERATE;
+    }
+    if(this.vx < CONSTANTS.VX_MAX) {
+      this.vx += this.randBetween(0, 0.3);
+    }
+    if(this.vx > -CONSTANTS.VX_MAX) {
+      this.vx -= this.randBetween(0, 0.3);
+    }
+    this.x += this.vx;
+    this.y += this.vy;
+    if(this.y + this.radius > window.innerHeight) {
+      this.reset();
+    }
+  }
+
+  randBetween(min, max) {
+    return min + Math.random() * (max - min);
+  }
+}
+class Snow {
+  constructor() {
+    this.canvas = document.createElement('canvas');
+    document.querySelector('body').appendChild(this.canvas);
+    this.ctx = this.canvas.getContext('2d');
+    this.onResize();
+    window.addEventListener('resize', () => { this.onResize() });
+
+
+    this.updateBound = this.update.bind(this);
+    requestAnimationFrame(this.updateBound);
+
+    this.createSnowFlakes();
+  }
+
+  onResize() {
+    this.width = window.innerWidth;
+    this.height = window.innerHeight;
+    this.canvas.width = this.width;
+    this.canvas.height = this.height;
+  }
+
+  createSnowFlakes() {
+    this.snowFlakesNum = window.innerHeight * window.innerWidth / 3000;
+    this.snowFlakes = [];
+    for (let i = 0; i < this.snowFlakesNum; i++) {
+      this.snowFlakes.push(new SnowFlake());
+    }
+  }
+
+  update() {
+    this.ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    this.snowFlakes.forEach(snowFlake => {
+      snowFlake.update();
+
+      // draw snow flake
+      this.ctx.save();
+      this.ctx.fillStyle = '#FFF';
+      this.ctx.beginPath();
+      this.ctx.arc(snowFlake.x, snowFlake.y, snowFlake.radius, 0, Math.PI * 2);
+      this.ctx.closePath();
+      this.ctx.globalAlpha = snowFlake.alpha;
+      this.ctx.fill();
+      this.ctx.restore();
+    });
+
+    requestAnimationFrame(this.updateBound);
+  }
 }
 
-snowIt();
-window.onresize = snowIt;
+// let it snow
+new Snow();
