@@ -407,7 +407,7 @@ $('.moment-museum .owl-carousel').owlCarousel({
 const CONSTANTS = {
   VX_MAX: 2,
   VY_MAX: 5,
-  VY_ACCELERATE: 0.01,
+  VY_ACCELERATE: 0.005,
 };
 class SnowFlake {
   constructor() {
@@ -417,10 +417,17 @@ class SnowFlake {
     this.vy = 0;
     this.radius = 0;
     this.alpha = 0;
+    this.opacity = 1;
     this.reset();
+    this.disappear();
+  }
+  
+  disappear() {
+    this.opacity = this.opacity - 0.025;
   }
 
   reset() {
+    this.opacity = 1;
     this.radius = this.randBetween(1, 3);
     this.alpha = this.randBetween(0.3, 0.9);
     this.x = this.randBetween(0, window.innerWidth);
@@ -441,9 +448,16 @@ class SnowFlake {
     }
     this.x += this.vx;
     this.y += this.vy;
+    
+    if(this.y + this.radius > window.innerHeight - 200) {
+      this.disappear();
+    }
+    
     if(this.y + this.radius > window.innerHeight) {
       this.reset();
     }
+    
+    
   }
 
   randBetween(min, max) {
@@ -453,7 +467,7 @@ class SnowFlake {
 class Snow {
   constructor() {
     this.canvas = document.createElement('canvas');
-    document.querySelector('body').appendChild(this.canvas);
+    document.querySelector('#ani-snow').appendChild(this.canvas);
     this.ctx = this.canvas.getContext('2d');
     this.onResize();
     window.addEventListener('resize', () => { this.onResize() });
@@ -487,7 +501,7 @@ class Snow {
 
       // draw snow flake
       this.ctx.save();
-      this.ctx.fillStyle = '#FFF';
+      this.ctx.fillStyle = "rgba(255, 255, 255, "+ snowFlake.opacity +")";
       this.ctx.beginPath();
       this.ctx.arc(snowFlake.x, snowFlake.y, snowFlake.radius, 0, Math.PI * 2);
       this.ctx.closePath();
