@@ -163,14 +163,18 @@ $('.slider-syncing-4').owlCarousel({
   // autoplay:true,
   autoplayTimeout:4000
 })
-  $('.dropdown')
-  .dropdown({
-    onChange: function(value, text, $selectedItem) {
-      $("#main-play").attr('src',value);
-      $("#main-play")[0].src += "?autoplay=1";
-    setTimeout(function(){ $("#yt").show(); }, 200);
-    }
-  })
+
+
+   $(".select-videos-main .item").click(function(){
+        var data_src_1=$(this).attr("data-src");
+        $("#main-play").attr('src',data_src_1);
+
+        // $('html,body').animate({
+        //     scrollTop: $(".video-star-tv").offset().top
+        // }, 'slow');
+        $("#main-play")[0].src += "?autoplay=1";
+        setTimeout(function(){ $("#yt").show(); }, 200);
+        })
 
   $(".block-videos .thumb-nail").click(function(){
         $(".block-three-videos .col-md-4").removeClass("active");
@@ -184,6 +188,8 @@ $('.slider-syncing-4').owlCarousel({
         $("#main-play")[0].src += "?autoplay=1";
         setTimeout(function(){ $("#yt").show(); }, 200);
         })
+
+ 
 
   // -----------------------------------------------------------------------------------
 // http://wowslider.com/
@@ -382,27 +388,6 @@ $(document).ready(function(){
 // window.addEventListener("resize", function(event) {
 //     // smoke_animation();
 // })
-
-$('.moment-museum .owl-carousel').owlCarousel({
-    loop:true,
-    margin:0,
-    nav:true,
-    autoplay:true,
-    autoplayTimeout:2000,
-    autoplayHoverPause:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:1
-        },
-        1000:{
-            items:1
-        }
-    }
-});
-
 
 const CONSTANTS = {
   VX_MAX: 2,

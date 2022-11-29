@@ -158,7 +158,7 @@ input[type=submit] {
 }
 
 .navbar.fixed-nav {
-  position: fixed;
+  position: fixed !important;
   width: 100%;
 }
 
